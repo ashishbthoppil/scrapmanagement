@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+
+	body{
+		background-image: url("image/scrap.jpg");
+		background-repeat: no-repeat;
+ 		background-size: 100% 100%;
+	}
+
+</style>
+
+<!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+
+<!-- Bootstrap CDN -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<!-- Stylesheet -->
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!-- Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+	<title>Scrap Management System</title>
+	<div class="jumbotron">
+		<h1 style="font-family: Arial, Helvetica, sans-serif;"><span class="fa fa-recycle" style="color: floralwhite;"></span><strong><span style="color: #EB34E3;"> Scrap Management</span><span style="color: floralwhite;"> System<sub style="font-size: 12px;top: 110px;float: right;font-family:  Arial, Helvetica, sans-serif;"><i> -Your one stop solution to garbage problems!</i></sub></span></strong></h1>
+	</div>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+	   	  <div class="col-12 col-md-6 m-auto">
+	   	  	<p id="existAlert" class="hidden" style="position: absolute;top:-20px;color: red;"><strong>User already exists*</strong></p>
+			   <div class="regSection">
+					<h2 style="text-align:center;"><strong>Registration Form</strong></h2>
+				       <form class="form" method="POST" action="registration.php">
+						   <label for="name">Name: </label>&nbsp;&nbsp;&nbsp;<span id="nameError" class="errorSpan hidden" style="color: red;"><strong>*Name should contain 6-15 'letters' only</strong></span>	
+						   <input type="text" name="name" id="name" class="form-control" placeholder="Enter full name" required="true">
+						   <label for="email">Email: </label>&nbsp;&nbsp;&nbsp;<span id="emailError" class="errorSpan hidden" style="color: red;"><strong>*Invalid email address</strong></span>
+						   <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email id" required="true">
+						   <label for="mob">Mobile: </label>&nbsp;&nbsp;&nbsp;<span id="mobileError" class="errorSpan hidden" style="color: red;"><strong>*Mobile no. should have 10 'digits'</strong></span>
+						   <input type="text" name="mobile" id="mobile" class="form-control" placeholder="Enter Mobile Number" required="true">
+                           <label for="age">Age: </label>&nbsp;&nbsp;&nbsp;<span id="ageError" class="errorSpan hidden" style="color: red;"><strong>*Invalid age, should only contain digits</strong></span>
+						   <input type="text" name="age" id="age" class="form-control" placeholder="Enter your age" required="true">
+						   <br>
+						   <label for="gender">Gender: </label>
+						   
+						   	 <input type="radio" name="gender" id="genderm" value="Male" style="position: absolute;left: 17.5em;bottom: 34.8em;" checked="true"><span style="position: absolute;left: 15em;">Male</span></input>
+							<input type="radio" name="gender" id="genderf" value="Female" style="position: absolute;left: 22.5em;bottom: 34.8em;"><span style="position: absolute;left: 19em;">Female</span></input>
+						<br>
+						   <label for="address">Address: </label>&nbsp;&nbsp;&nbsp;<span id="addressError" class="errorSpan hidden" style="color: red;"><strong>*Address should be 10-15 characters in length</strong></span>
+						   <textarea name="address" id="address" class="form-control" placeholder="Enter Address" style="resize: none;" rows="3" required="true"></textarea>
+						   <label for="address">Country: </label>
+						   <select id="country" name="country" class="form-control">
+							   <option value="India">India</option>
+							   <option value="USA">USA</option>
+							   <option value="UK">UK</option>
+							   <option value="Australia">Australia</option>
+						</select>
+						   <label for="landmark">Landmark: </label>
+						   <input type="text" name="landmark" id="landmark" class="form-control" placeholder="Enter nearest Landmark">
+						   <label for="username">Username : </label>&nbsp;&nbsp;&nbsp;<span id="usernameError" class="errorSpan hidden" style="color: red;"><strong>*Username should be between 6 and 15 characters</strong></span>
+						   <input type="text" name="username" id="username" class="form-control" placeholder="Enter a username" required="true">
+						     <label for="password">Password : </label>&nbsp;&nbsp;&nbsp;<span id="passwordError" class="errorSpan hidden" style="color: red;"><strong>*Password should be between 6 and 15 characters</strong></span>
+						   <input type="password" name="password" id="password" class="form-control" placeholder="Enter a password" required="true">
+						   <label for="cpassword">Confirm password : </label>&nbsp;&nbsp;&nbsp;<span id="cpasswordError" class="errorSpan hidden" style="color: red;"><strong>*Passwords do not match</strong></span>
+						   <input type="password" name="cpassword" id="cpassword" class="form-control" placeholder="Enter a password again" required="true">
+							<input type="submit" name="register" value="Register" class="btn btn-primary" style="float: right;margin-top: 15px;">
+					   </form>
+
+			   </div>
+    	  </div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 col-md-10 m-auto">
+			<footer class="footer">
+		<h4 style="padding: 15px;"><strong>Contact us: </strong></h4>
+		<p style="font-size: 15px;position:absolute;left: 13em;bottom: 3em;">Tele : +0469-2345674</p>
+		<p style="font-size: 15px;position: absolute;left: 13em;bottom: 1em;">Mob : +91-9876543210</p>
+		<h4 style="padding: 15px;position: absolute;right: 10em;bottom: 1.7em;"><strong>Follow us: </strong></h4>
+		<div style="position: absolute;right: 8em;">
+		<a href="#" class="fa fa-facebook" style="font-size: 30px;"></a>&nbsp;&nbsp;
+		<a href="#" class="fa fa-twitter" style="font-size: 30px;"></a>&nbsp;&nbsp;
+		<a href="#" class="fa fa-instagram" style="font-size: 30px;"></a>
+	</div>
+</div>
+		</div>
+	</div>
+
+   
+</body>
+</html>
+
+<script type="text/javascript">
+
+	
+	$(document).ready(function(){
+		let searchParams = new URLSearchParams(window.location.search);
+		let user = searchParams.get('user');
+		if(user == 'taken'){
+			$('#existAlert').addClass('hidden');
+		}
+	});
+
+	// html Validation
+
+	$("form").submit(function(e){
+		let name = $('#name').val();
+		let email = $('#email').val();
+		let mobile = $('#mobile').val();
+		let age = $('#age').val();
+		let address = $('#address').val();
+		let username = $('#username').val();
+		let password = $('#password').val();
+		let cpassword = $('#cpassword').val();
+
+		if(!$('#existAlert').hasClass('hidden')){
+			$('#existAlert').addClass()
+		}
+
+		$('input').each(function(){
+			if($(this).hasClass('errorClass')){
+				$(this).removeClass('errorClass')
+			}
+		});
+
+		$('.errorSpan').each(function(){
+				if(!($(this).hasClass('hidden'))){
+					$(this).addClass('hidden');
+				}
+			});
+
+		if(name.length < 6 || name.length > 15 || name.match(/[0-9]/i)){
+		e.preventDefault();
+		alert('Please check the name!');
+		$('#name').addClass('errorClass');
+		$('#nameError').removeClass('hidden');
+		return false;
+	}
+	if(email.length < 10){
+		console.log($('#email').length)
+		e.preventDefault();
+		alert('Please check the email!');
+		$('#email').addClass('errorClass');
+		$('#emailError').removeClass('hidden');
+		return false;
+	}
+	if(mobile.length != 10 || mobile.match(/[a-z]/i)){
+		e.preventDefault();
+		alert('Please check the mobile number!');
+		$('#mobile').addClass('errorClass');
+		$('#mobileError').removeClass('hidden');
+		return false;
+	}
+	if(age.match(/[a-z]/i) || age.length >= 3){
+
+		e.preventDefault();
+		alert('Please check the age entered');
+		$('#age').addClass('errorClass');
+		$('#ageError').removeClass('hidden');
+		return false;
+	}
+	if(address.length < 10 || address.length > 15 ){
+		e.preventDefault();
+		alert('Please check the entered address');
+		$('#address').addClass('errorClass');
+		$('#addressError').removeClass('hidden');
+		return false;
+	}
+	if(username.length < 6 || username.length > 15){
+		e.preventDefault();
+		alert('Please check the entered username');
+		$('#username').addClass('errorClass');
+		$('#usernameError').removeClass('hidden');
+		return false;
+	}
+	if(password.length < 6 || password.length > 15){
+		e.preventDefault();
+		alert('Please check the entered password');
+		$('#password').addClass('errorClass');
+		$('#passwordError').removeClass('hidden');
+		return false;
+	}
+	if(cpassword.length < 6 || cpassword.length > 15 || password != cpassword){
+		e.preventDefault();
+		alert('Please check the entered password');
+		$('#cpassword').addClass('errorClass');
+		$('#cpasswordError').removeClass('hidden');
+		return false;
+	}
+		
+	});
+</script>
